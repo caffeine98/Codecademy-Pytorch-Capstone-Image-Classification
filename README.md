@@ -1,0 +1,9 @@
+# Pytorch Capstone Project - Image Classification for detection of Diabetic Retinopathy
+
+This project involves building and training a Convolutional Neural Network model using Pytorch to detect Diabetic retinopathy based on images of retinas. The dataset used is from Indian Diabetic Retinopathy Image Dataset (IDRiD), which consists of 516 fundus images. This dataset is split into 413 training images and 103 testing images.
+
+Two different models are built and trained in this project. The goal is to train the models to detect whether the image is indicative of diabetic retinopathy. Hence, this is a binary classification model, so it will make use of Pytorch's Binary Cross Entropy loss function to calculate weights. 
+
+The first conlutional neural network model consists of three convolutional layers consisting of a 3x3 kernel with padding. A 2x2 max-pooling kernel is used after each convolution layer to reduce the dimentionality while retaining important information. The output of the last max-pooling layer is sent to two fully connected layers. Each of the layers uses the ReLU activation function, except the final layer, which uses sigmoid function.. It uses the Adam optimizer, with a learning rate of 0.0002.
+
+The second model is a variant of VGG-16, which is a Convolutional Neural Network Model proposed by Karen Simonyan and Andrew Zisserman from the Visual Geometry Group at University of Oxford. It is designed for training large scale models for image classification tasks. While it is best used for larger datasets, I wanted to try to implement it to see how it performs with this IDRiD dataset. VGG-16 consists of a total of 16 layers, of which there are 13 convolutional layers, and 3 fully connected layers. The convolutional layers have a kernel size of 3x3 and a padding of 1. It uses the Adam optimizer, with a learning rate of 0.0025.
